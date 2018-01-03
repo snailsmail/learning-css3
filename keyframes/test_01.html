@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@keyframes</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: divStyle 5s linear 2s infinite alternate;
+            /**
+                linear 是animation-timing-function, 动画运动曲线 匀速
+                2s 是animation-delay,动画何时开始 2s
+                infinite 是animation-iteration-count,动画播放次数 无限次
+                alternate 是animation-direction,下一个动画播放是否轮流反向播放 交替（在奇数次反向播放，在偶数次正向播放）
+            */
+        }
+
+        @keyframes divStyle {
+           0% {
+               background: red;
+               left: 0px;
+               top: 0px;
+           }
+            25% {
+                background: yellow;
+                left: 100px;
+                top: 0px;
+            }
+            50% {
+                background: blue;
+                left: 100px;
+                top: 100px;
+            }
+            75% {
+                background: green;
+                left: 0px;
+                top: 100px;
+            }
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
