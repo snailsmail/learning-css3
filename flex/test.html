@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width: 100%;
+            border: 2px solid blue;
+            display: flex; /* 开启弹性布局 */
+            flex-direction: row-reverse; /* 调整显示方向为从右到左 */
+            text-align: center;
+            /*
+            设为flex布局后，子元素float，clear和vertical-align属性将失效
+                flex-direction 设置主轴方向
+                    row 主轴为x轴，起点在左端
+                    row-reverse 主轴为x轴，起点在右端
+                    column 主轴为y轴，，起点在上沿
+                    column-reverse 主轴为垂直方向，起点在下沿
+                justify-content 设置item沿着主轴方向的的排列规则
+                    flex-start 排在主轴开头，默认值
+                    flex-end 排在主轴末尾
+                    center 排在主轴中间
+                    space-between 平均排布，两端无间隙
+                    space-around 平均排布，两端有间隙（项目之间的间隙比项目与边框之间的间隙大一倍）
+                align-items 设置item沿着副轴方向的排列规则
+                    flex-start 排在副轴的开头
+                    flex-end 排在副轴的结尾
+                    center 排在副轴中间
+                    baseline 文字基线对齐
+                    stretch 自动拉伸item，来填充剩余空隙，这是默认值，可以设置宽高度覆盖默认值
+                align-content:
+                    当item的宽度超过了容器的总宽度，会被压缩，可以设置 flex-flow: row wrap; 让他自动换行
+                    此时可以使用align-content来设置多行的item的排布规则，也就是副轴的排布
+                    设置属性和justify-content一直，只不过多了一个stretch
+                    stretch 将行的副轴占比拉伸，占据剩余空间
+                flex-flow
+                    这是 flex-direction 和 flex-wrap 的和写形式，默认值为 row nowrap
+                flex-wrap 设置自动换行
+                    nowrap 默认值，不换行
+                    nowrap 自动换行
+                    wrap-reverse 调换副轴的起始位置，第一行在下方
+            */
+        }
+        .item{
+            flex: 1; /* 设置item占比 */
+            border: 1px solid red;
+            /*
+                align-self 设置单个item的排列方式
+                    属性值和align-items一致
+                order 排序优先级，可以是正整数，负整数，默认都是0
+                    例如 order: 1
+                    越大的值，优先级越低
+            */
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+</body>
+</html>

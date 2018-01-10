@@ -34,6 +34,6 @@
     Safari 5.1.7及以上
 
     chrome 13及以上
-    
+
     opera 12及以上
 
