@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>border-image</title>
+  <style>
+    /**
+      border-image: url('border.png')(图片路径) 70 70 70 70 (中间四个70代表切割图片的宽度,单位为像素。但省略px也可以使用百分比，遵循顺时针规则设置，可以简写为70) repeat(图片的延伸方式，有三个参数，round（平铺，空出的地方会占满） repeat(重复) stretch(拉伸))
+      */
+    div.border-image-div {
+      margin: 0 auto;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      width: 450px;
+      border: 15px solid #ccc;
+      border-image: url('http://img.mukewang.com/52e22a1c0001406e03040221.jpg') 15 repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="border-image-div">
+    请为我镶嵌上漂亮的画框吧
+  </div>
+</body>
+</html>

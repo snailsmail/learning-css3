@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>box-shadow</title>
+  <style>
+    /* 外阴影 */
+    div.box-shadow-outset {
+      width: 100px;
+      height: 100px;
+      box-shadow: 4px 4px 6px #9da;
+    }
+
+    /* 内阴影 */
+    div.box-shadow-inset {
+      width: 100px;
+      height: 100px;
+      box-shadow: inset 4px 4px 6px #9da;
+    }
+
+    /* 多阴影 */
+    div.box-shadow-multi {
+      width: 100px;
+      height: 100px;
+      box-shadow: 4px 4px 6px indianred, 4px 4px 6px darkolivegreen inset;
+    }
+  </style>
+</head>
+<body>
+  <h2>外阴影</h2>
+  <div class="box-shadow-outset">
+  </div>
+  <br />
+
+  <h2>内阴影</h2>
+  <div class="box-shadow-inset">
+  </div>
+  <br />
+
+  <h2>多阴影</h2>
+  <div class="box-shadow-multi">
+  </div>
+</body>
+</html>
